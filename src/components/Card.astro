@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 
 const {
   class: className,
-  headerClassName,
-  titleClassName,
-  descriptionClassName,
-  contentClassName,
-  footerClassName,
+  headerClass,
+  titleClass,
+  descriptionClass,
+  contentClass,
+  footerClass,
   ...props
 } = Astro.props;
 ---
@@ -20,28 +20,25 @@ const {
   )}
   {...props}
 >
-  <div class={cn("flex flex-col space-y-1.5 p-6", headerClassName)}>
+  <div class={cn("flex flex-col space-y-1.5 p-6", headerClass)}>
     <slot name="header" />
   </div>
 
   <div
-    class={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
-      titleClassName
-    )}
+    class={cn("text-2xl font-semibold leading-none tracking-tight", titleClass)}
   >
     <slot name="title" />
   </div>
 
-  <div class={cn("text-sm text-muted-foreground", descriptionClassName)}>
+  <div class={cn("text-sm text-muted-foreground", descriptionClass)}>
     <slot name="description" />
   </div>
 
-  <div class={cn("p-6 pt-0", contentClassName)}>
+  <div class={cn("p-6 pt-0", contentClass)}>
     <slot name="content" />
   </div>
 
-  <div class={cn("flex items-center p-6 pt-0", footerClassName)}>
+  <div class={cn("flex items-center p-6 pt-0", footerClass)}>
     <slot name="footer" />
   </div>
 </div>

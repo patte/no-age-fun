@@ -19,8 +19,8 @@ const { id, open } = Astro.props;
   -translate-y-1/2
   md:-translate-x-2/4"
 >
-  <Card class="max-w-prose">
-    <form method="dialog" slot="header">
+  <Card class="max-w-prose" headerClass="pb-2 pt-4" footerClass="pb-0">
+    <form method="dialog" slot="header" class="flex justify-end">
       <button><Close class="w-8" /></button>
     </form>
     <div slot="content">

@@ -1,12 +1,13 @@
 ---
-import Layout from "../layouts/main.astro";
-import Button from "../components/Button.astro";
+import Layout from "@/layouts/main.astro";
+import Button from "@/components/Button.astro";
 import Heart from "@/components/Heart.astro";
 import Modal from "@/components/Modal.astro";
+import Input from "@/components/Input.astro";
 ---
 
 <Layout content={{ title: "noage.fun" }}>
-  <div class="container mx-auto space-y-6 py-4 pb-6 px-4">
+  <div class="container mx-auto space-y-6 py-4 px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
       <div>
         <p>Fühlst du dich manchmal zu alt?</p>
@@ -20,10 +21,10 @@ import Modal from "@/components/Modal.astro";
         <p class="pl-0">Dann solltest du dich damit ernsthaft beschäftigen.</p>
       </div>
       <div class="flex flex-col items-center space-y-4">
-        <img src="/book-cover.jpeg" alt="Book cover" class="md:w-72" />
+        <img src="/book-cover.jpeg" alt="Book cover" class="md:w-80" />
         <Modal id="dialog" open="Jetzt kaufen!">
           <div slot="main" class="space-y-4">
-            <p>
+            <p class="text-pretty">
               Bestell das Buch jetzt schon bei deiner lokalen Buchhandlung! Das
               ist gleich eine dreifach gute Idee: Du bekommst ein schönes Buch,
               die Buchhandlung ein bisschen Umsatz, den sie auf jeden Fall
@@ -31,7 +32,7 @@ import Modal from "@/components/Modal.astro";
               bekommt bei vielen Bestellungen vielleicht einen schönen Platz im
               Schaufenster :-)
             </p>
-            <p>
+            <p class="text-pretty">
               Wenn du keine lokale Buchhandlung hast und auch keine finden
               möchtest, kannst du das Buch selbstverständlich auch <a
                 class="underline"
@@ -80,17 +81,18 @@ import Modal from "@/components/Modal.astro";
       <img src="/authors.jpeg" alt="Book cover" />
     </div>
 
-    <div class="max-w-96 mx-auto">
-      <span> Melde dich zu unserem Newsletter an!</span>
+    <div class="max-w-96 mx-auto py-6">
+      <span> Melde dich an zu unserem Newsletter!</span>
       <form action="https://dasgehtbesser.substack.com/subscribe" method="get">
         <div class="flex flex-row space-x-2">
-          <input
+          <Input
             type="email"
             name="freeSignupEmail"
             placeholder="Deine E-Mail-Adresse"
-            class="w-full p-2 border border-input rounded-md"
+            class="w-full p-2 border border-input rounded-md h-10"
+            autocomplete="email"
           />
-          <Button type="submit">Anmelden</Button>
+          <Button type="submit">Abonnieren</Button>
         </div>
       </form>
     </div>
