@@ -1,0 +1,47 @@
+---
+// source: https://github.com/shadcn-ui/ui/blob/main/apps/www/registry/default/ui/card.tsx
+import { cn } from "@/lib/utils";
+
+const {
+  class: className,
+  headerClassName,
+  titleClassName,
+  descriptionClassName,
+  contentClassName,
+  footerClassName,
+  ...props
+} = Astro.props;
+---
+
+<div
+  class={cn(
+    "rounded-lg border bg-card text-card-foreground shadow-sm",
+    className
+  )}
+  {...props}
+>
+  <div class={cn("flex flex-col space-y-1.5 p-6", headerClassName)}>
+    <slot name="header" />
+  </div>
+
+  <div
+    class={cn(
+      "text-2xl font-semibold leading-none tracking-tight",
+      titleClassName
+    )}
+  >
+    <slot name="title" />
+  </div>
+
+  <div class={cn("text-sm text-muted-foreground", descriptionClassName)}>
+    <slot name="description" />
+  </div>
+
+  <div class={cn("p-6 pt-0", contentClassName)}>
+    <slot name="content" />
+  </div>
+
+  <div class={cn("flex items-center p-6 pt-0", footerClassName)}>
+    <slot name="footer" />
+  </div>
+</div>

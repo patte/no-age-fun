@@ -2,10 +2,12 @@
 import Layout from "../layouts/main.astro";
 import Button from "../components/Button.astro";
 import Heart from "@/components/Heart.astro";
+import Modal from "@/components/Modal.astro";
+import Card from "@/components/Card.astro";
 ---
 
 <Layout content={{ title: "noage.fun" }}>
-  <div class="container mx-auto space-y-6 py-8">
+  <div class="container mx-auto space-y-6 py-4 pb-6 px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
       <div>
         <p>Fühlst du dich manchmal zu alt?</p>
@@ -20,9 +22,29 @@ import Heart from "@/components/Heart.astro";
       </div>
       <div class="flex flex-col items-center space-y-4">
         <img src="/book-cover.jpeg" alt="Book cover" class="md:w-72" />
-        <Button>Jetzt kaufen!</Button>
+        <Modal id="dialog" open="Jetzt kaufen!">
+          <div slot="main" class="space-y-4">
+            <p>
+              Bestell das Buch jetzt schon bei deiner lokalen Buchhandlung! Das
+              ist gleich eine dreifach gute Idee: Du bekommst ein schönes Buch,
+              die Buchhandlung ein bisschen Umsatz, den sie auf jeden Fall
+              besser brauchen kann als, sagen wir mal, Amazon – und das Buch
+              bekommt bei vielen Bestellungen vielleicht einen schönen Platz im
+              Schaufenster :-)
+            </p>
+            <p>
+              Wenn du keine lokale Buchhandlung hast und auch keine finden
+              möchtest, kannst du das Buch selbstverständlich auch <a
+                class="underline"
+                href="https://www.brandeins.de/products/zu-jung-zu-alt-egal?taxon_id=20"
+                >direkt beim Verlag bestellen</a
+              >.
+            </p>
+          </div>
+        </Modal>
       </div>
     </div>
+
     <div class="text-center p-4">
       <p class="text-4xl font-bold p-2">“Zu jung? Zu alt? Egal!”</p>
       <p class="text-2xl text-pretty">
@@ -33,25 +55,10 @@ import Heart from "@/components/Heart.astro";
         asLink
         href="https://www.book2look.com/book/9783989280243"
         class="mt-4"
-        >Rinschauen
+        >Reinschauen
       </Button>
     </div>
-    <p class="hidden">
-      Bestell das Buch jetzt schon bei deiner lokalen Buchhandlung! Das ist
-      gleich eine dreifach gute Idee: Du bekommst ein schönes Buch, die
-      Buchhandlung ein bisschen Umsatz, den sie auf jeden Fall besser brauchen
-      kann als, sagen wir mal, Amazon – und das Buch bekommt bei vielen
-      Bestellungen vielleicht einen schönen Platz im Schaufenster :-)
-    </p>
-    <p class="hidden">
-      (Wenn du keine lokale Buchhandlung hast und auch keine finden möchtest,
-      auch wenn wir es dir wirklich nur empfehlen können, kannst du das Buch
-      selbstverständlich auch <a
-        class="underline"
-        href="https://www.brandeins.de/products/zu-jung-zu-alt-egal?taxon_id=20"
-        >direkt beim Verlag bestellen</a
-      >.)
-    </p>
+
     <div>
       <span>Gründe das Buch zu lesen:</span>
       <ul class="list-disc list-inside marker:text-primary">
@@ -71,10 +78,10 @@ import Heart from "@/components/Heart.astro";
         So glücklich waren die Autorïnnen nach Abgabe des Manuskripts – so
         glücklich wirst auch Du nach der Lektüre sein.
       </p>
-      <img src="/authors.jpeg" alt="Book cover" class="" />
+      <img src="/authors.jpeg" alt="Book cover" />
     </div>
 
-    <div class="max-w-96 mx-auto py-4">
+    <div class="max-w-96 mx-auto">
       <span> Melde dich zu unserem Newsletter an!</span>
       <form action="https://dasgehtbesser.substack.com/subscribe" method="get">
         <div class="flex flex-row space-x-2">

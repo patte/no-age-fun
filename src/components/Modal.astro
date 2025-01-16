@@ -1,0 +1,44 @@
+---
+import Button from "./Button.astro";
+import Card from "./Card.astro";
+import Close from "./Close.astro";
+
+const { id, open } = Astro.props;
+---
+
+<Button onclick={`window.${id}.showModal()`} id="open">{open}</Button>
+
+<dialog
+  id={id}
+  class="bg-transparent
+  backdrop:backdrop-blur-sm
+  my-auto
+  fixed
+  top-2/4
+  md:left-1/2
+  -translate-y-1/2
+  md:-translate-x-2/4"
+>
+  <Card class="max-w-prose">
+    <form method="dialog" slot="header">
+      <button><Close class="w-8" /></button>
+    </form>
+    <div slot="content">
+      <slot name="main" />
+    </div>
+  </Card>
+</dialog>
+
+<script>
+  const dialogs = document.querySelectorAll("dialog");
+  dialogs.forEach((dialog) => {
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+  });
+
+  // open (dev)
+  // document.getElementById("open")?.click();
+</script>
