@@ -21,7 +21,7 @@ const { id, open } = Astro.props;
 >
   <Card class="max-w-prose" headerClass="pb-2 pt-4" footerClass="pb-0">
     <form method="dialog" slot="header" class="flex justify-end">
-      <button><Close class="w-8" /></button>
+      <button class="focus:outline-none"><Close class="w-8" /></button>
     </form>
     <div slot="content">
       <slot name="main" />
@@ -40,5 +40,5 @@ const { id, open } = Astro.props;
   });
 
   // open (dev)
-  // document.getElementById("open")?.click();
+  //document.getElementById("open")?.click();
 </script>
