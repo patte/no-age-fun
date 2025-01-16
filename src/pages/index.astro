@@ -16,15 +16,17 @@ import Input from "@/components/Input.astro";
   <div class="container mx-auto space-y-6 py-4 px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
       <div>
-        <p>Fühlst du dich manchmal zu alt?</p>
-        <p class="pl-3">Oder zu jung?</p>
-        <p class="pl-0">Oder hast du vielleicht Angst, bald zu alt zu sein?</p>
-        <p class="pl-3">Und was ist mit den Menschen um dich herum?</p>
-        <p class="pl-0">Hast du mit manchen Probleme, weil sie zu alt sind?</p>
-        <p class="pl-3">Oder zu jung?</p>
-        <p class="pl-0">Überhaupt: Denkst du oft über Alter nach?</p>
-        <p class="pl-3">Tag für Tag, ganz selbstverständlich?</p>
-        <p class="pl-0">Dann solltest du dich damit ernsthaft beschäftigen.</p>
+        <p class="pl-3">Fühlst du dich manchmal zu alt?</p>
+        <p class="pl-0">Oder zu jung?</p>
+        <p class="pl-3">Oder hast du vielleicht Angst, bald zu alt zu sein?</p>
+        <p class="pl-0">Und was ist mit den Menschen um dich herum?</p>
+        <p class="pl-3">Hast du mit manchen Probleme, weil sie zu alt sind?</p>
+        <p class="pl-0">Oder zu jung?</p>
+        <p class="pl-3">Überhaupt: Denkst du oft über Alter nach?</p>
+        <p class="pl-0">Tag für Tag, ganz selbstverständlich?</p>
+        <p class="pl-3">
+          Dann solltest du dich damit einmal ernsthaft beschäftigen.
+        </p>
       </div>
       <div class="flex flex-col items-center space-y-4">
         <img
@@ -36,7 +38,7 @@ import Input from "@/components/Input.astro";
         />
         <Modal id="dialog" open="Jetzt kaufen!">
           <div slot="main" class="space-y-4">
-            <p class="text-pretty">
+            <p>
               Bestell das Buch jetzt schon bei deiner lokalen Buchhandlung! Das
               ist gleich eine dreifach gute Idee: Du bekommst ein schönes Buch,
               die Buchhandlung ein bisschen Umsatz, den sie auf jeden Fall
@@ -44,7 +46,7 @@ import Input from "@/components/Input.astro";
               bekommt bei vielen Bestellungen vielleicht einen schönen Platz im
               Schaufenster :-)
             </p>
-            <p class="text-pretty">
+            <p>
               Wenn du keine lokale Buchhandlung hast und auch keine finden
               möchtest, kannst du das Buch selbstverständlich auch <a
                 class="underline"
@@ -59,7 +61,7 @@ import Input from "@/components/Input.astro";
 
     <div class="text-center p-4">
       <p class="text-4xl font-bold p-2">“Zu jung? Zu alt? Egal!”</p>
-      <p class="text-2xl text-pretty">
+      <p class="text-2xl">
         Das Buch zu dem Thema, über das alle nachdenken, aber niemand spricht
       </p>
       <Button
@@ -98,8 +100,8 @@ import Input from "@/components/Input.astro";
       />
     </div>
 
-    <div class="max-w-96 mx-auto py-6">
-      <span> Melde dich an zu unserem Newsletter!</span>
+    <div class="max-w-96 mx-auto py-6 space-y-2">
+      <span>Abonniere unseren Newsletter!</span>
       <form action="https://dasgehtbesser.substack.com/subscribe" method="get">
         <div class="flex flex-row space-x-2">
           <Input
