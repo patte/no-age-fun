@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -42,6 +44,9 @@ module.exports = {
       sm: "640px",
       md: "768px",
       //lg: "1024px",
+    },
+    fontFamily: {
+      sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
     },
   },
   plugins: [],
