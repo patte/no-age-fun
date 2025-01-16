@@ -57,7 +57,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-pretty;
   }
   @font-face {
     font-family: "Quicksand";
@@ -65,5 +65,12 @@
     font-weight: 400;
     font-display: swap;
     src: url("/quicksand-latin-400-normal.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Quicksand";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/quicksand-latin-700-normal.woff2") format("woff2");
   }
 }
