@@ -16,17 +16,15 @@ import Input from "@/components/Input.astro";
   <div class="container mx-auto space-y-6 py-4 px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
       <div>
-        <p class="pl-3">Fühlst du dich manchmal zu alt?</p>
-        <p class="pl-0">Oder zu jung?</p>
-        <p class="pl-3">Oder hast du vielleicht Angst, bald zu alt zu sein?</p>
-        <p class="pl-0">Und was ist mit den Menschen um dich herum?</p>
-        <p class="pl-3">Hast du mit manchen Probleme, weil sie zu alt sind?</p>
-        <p class="pl-0">Oder zu jung?</p>
-        <p class="pl-3">Überhaupt: Denkst du oft über Alter nach?</p>
-        <p class="pl-0">Tag für Tag, ganz selbstverständlich?</p>
-        <p class="pl-3">
-          Dann solltest du dich damit einmal ernsthaft beschäftigen.
-        </p>
+        <p class="font-bold">Fühlst du dich manchmal zu alt?</p>
+        <p>Oder zu jung?</p>
+        <p>Oder hast du vielleicht Angst, bald zu alt zu sein?</p>
+        <p>Und was ist mit den Menschen um dich herum?</p>
+        <p>Hast du mit manchen Probleme, weil sie zu alt sind?</p>
+        <p>Oder zu jung?</p>
+        <p>Überhaupt: Denkst du oft über Alter nach?</p>
+        <p>Tag für Tag, ganz selbstverständlich?</p>
+        <p>Dann solltest du dich damit einmal ernsthaft beschäftigen.</p>
       </div>
       <div class="flex flex-col items-center space-y-4">
         <img
@@ -38,12 +36,11 @@ import Input from "@/components/Input.astro";
         <Modal id="dialog" open="Jetzt kaufen!">
           <div slot="main" class="space-y-4">
             <p>
-              Bestell das Buch jetzt schon bei deiner lokalen Buchhandlung! Das
-              ist gleich eine dreifach gute Idee: Du bekommst ein schönes Buch,
-              die Buchhandlung ein bisschen Umsatz, den sie auf jeden Fall
-              besser brauchen kann als, sagen wir mal, Amazon – und das Buch
-              bekommt bei vielen Bestellungen vielleicht einen schönen Platz im
-              Schaufenster :-)
+              Bestell das Buch bei deiner lokalen Buchhandlung! Das ist aus
+              vielen Gründen eine gute Idee: Du bekommst ein schönes Buch, die
+              Buchhandlung ein wenig Umsatz, der dort besser aufgehoben ist als
+              bei Amazon, und das Buch bekommt bei vielen Bestellungen
+              vielleicht einen schönen Platz im Schaufenster.
             </p>
             <p>
               Wenn du keine lokale Buchhandlung hast und auch keine finden
@@ -75,21 +72,20 @@ import Input from "@/components/Input.astro";
     <div>
       <span>Gründe das Buch zu lesen:</span>
       <ul class="list-disc list-inside marker:text-primary">
-        <li>Er verbessert deine Laune</li>
+        <li>Er verbessert deine Laune.</li>
+        <li>Du lernst etwas, das für die Welt und dein Leben relevant ist.</li>
+        <li>Du findest darin Ideen, die du noch nie gelesen hast.</li>
         <li>
-          Du lernst etwas, das für die Welt, aber auch dein Leben relevant ist
+          Es ist kurz und liest sich leicht, ist also auch für unterwegs
+          geeignet.
         </li>
-        <li>Du findest darin Gedanken, die du so noch nie gelesen hast</li>
-        <li>
-          Es ist kurz Es liest sich leicht, ist also geeignet für unterwegs
-        </li>
+        <li>Es liefert prima Gesprächsthemen.</li>
       </ul>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
       <p class="md:order-1">
-        So glücklich waren die Autorïnnen nach Abgabe des Manuskripts – so
-        glücklich wirst auch Du nach der Lektüre sein.
+        Glückliche Autorïnnen nach Abgabe des Manuskripts.
       </p>
       <img
         src="/authors.webp"
@@ -102,7 +98,7 @@ import Input from "@/components/Input.astro";
     <div class="max-w-96 mx-auto py-6 space-y-2">
       <span
         >Wir schreiben auch einen <span class="font-bold">Newsletter</span>
-        zu allem, was uns so interessiert und dich vielleicht weiter bringt.</span
+        zu allem, was uns interessiert und dich vielleicht weiter bringt.</span
       >
       <form action="https://dasgehtbesser.substack.com/subscribe" method="get">
         <div class="flex flex-row space-x-2">
