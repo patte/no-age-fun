@@ -11,6 +11,7 @@ const { content } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{content.title}</title>
     <meta name="description" content={content.description} />
+    <meta property="og:image" content={content.image} />
   </head>
   <body>
     <slot />
