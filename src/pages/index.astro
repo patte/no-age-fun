@@ -131,6 +131,45 @@ import Input from "@/components/Input.astro";
       </p>
     </div>
 
+    <div class="space-y-2 pb-6">
+      <p>
+        Die Playlist zum Buch mit tanzbarer Musik von den 1940gern bis heute.
+      </p>
+      <div class="relative">
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center space-y-2 text-center rounded-xl h-[152px] bg-[hsla(0,0%,12%,1)]"
+          id="disclaimer"
+        >
+          <img
+            src="/spotify.webp"
+            alt="Spotify Logo"
+            class="absolute inset-auto blur-[5px]"
+          />
+          <p class="text-sm w-72 sm:w-96 z-10">
+            Wenn du klickst, wird externer Inhalt von Spotify geladen und dabei
+            personenbezogene Daten übertragen.
+          </p>
+          <Button
+            asLink
+            variant="outline"
+            class="z-10"
+            target="spotify"
+            href="https://open.spotify.com/embed/playlist/45rMY6UdT3boukhIlD7FO5?utm_source=generator&theme=0"
+            onclick="document.getElementById('disclaimer').remove()"
+          >
+            Playlist laden
+          </Button>
+        </div>
+        <iframe
+          name="spotify"
+          class="rounded-xl"
+          width="100%"
+          height="152"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          loading="lazy"></iframe>
+      </div>
+    </div>
+
     <div class="text-center">
       <Heart class="w-4 inline-block align-[-1px]" />
       Clara Vuillemin &amp; Peter Lau
