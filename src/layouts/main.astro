@@ -12,6 +12,8 @@ const { content } = Astro.props;
     <title>{content.title}</title>
     <meta name="description" content={content.description} />
     <meta property="og:image" content={content.image} />
+    <meta property="og:locale" content="de" />
+    <meta property="og:type" content="book" />
   </head>
   <body>
     <slot />
