@@ -6,11 +6,11 @@ import Close from "./Close.astro";
 const { id, open } = Astro.props;
 ---
 
-<Button onclick={`window.${id}.showModal()`} id="open">{open}</Button>
+<Button onclick={`window.${id}.showModal()`}>{open}</Button>
 
 <dialog
   id={id}
-  class="bg-transparent backdrop:backdrop-blur-sm fixed top-2/4 -translate-y-1/2"
+  class="bg-transparent backdrop:backdrop-blur-sm fixed top-1/2 -translate-y-1/2"
 >
   <Card class="max-w-prose" headerClass="pb-2 pt-4" footerClass="pb-0">
     <form method="dialog" slot="header" class="flex justify-end">
@@ -31,7 +31,4 @@ const { id, open } = Astro.props;
       }
     });
   });
-
-  // open (dev)
-  // document.getElementById("open")?.click();
 </script>
