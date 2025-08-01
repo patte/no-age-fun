@@ -57,7 +57,7 @@ const buttonClass = cn(
       <slot />
     </button>
   ) : (
-    <a class={buttonClass} {...rest}>
+    <a class={cn(buttonClass, "no-underline")} {...rest}>
       <slot />
     </a>
   )

@@ -59,6 +59,9 @@
   body {
     @apply bg-background text-foreground text-pretty;
   }
+  a {
+    @apply underline-offset-1 underline;
+  }
   @font-face {
     font-family: "Quicksand";
     font-style: normal;
